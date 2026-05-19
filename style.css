@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+}
+
+img {
+    height: 25px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+
+}
+
+body {
+    background-image: url(img/img3.png);
+    font-family: "Roboto", sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+
+}
+
+.container {
+    background-color: #d1d1d1;
+    width: 500px;
+    min-height: 500px;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 200px auto 0;
+    background-color: transparent;
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.60),
+        0 8px 25px rgba(0, 0, 0, 0.40);
+}
+
+.input-tesk {
+    border: none;
+    border-radius: 10px;
+    width: 300px;
+    height: 40px;
+    padding: 5px;
+
+}
+
+.button-task {
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    background-color: #003329;
+    color: #fff;
+    font-size: 17px;
+    padding: 0 15px;
+    float: right;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.button-task:hover {
+    opacity: 0.8;
+}
+
+.button-task:active {
+    opacity: 0.6;
+
+}
+
+.list-task {
+    width: 100%;
+    list-style: none;
+
+}
+
+.task {
+    background-color: #f2f2f2;
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    min-height: 50px;
+    align-items: center;
+
+    justify-content: space-between;
+    padding: 0 15px;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+
+}
+
+.task p {
+    flex: 1;
+    word-break: break-word;
+}
+
+.task:hover img {
+    opacity: 1;
+
+}
+
+h1 {
+    text-align: center;
+    margin: 10px 0px 30px;
+    color: #f1f5f9;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* ANIMACAO NO TODO-LIST */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* aniamcao tarefa */
+@keyframes slideSoft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px) scale(0.97);
+        filter: blur(3px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+.task {
+    animation: slideSoft 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.task:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.done p {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.data {
+    font-size: 12px;
+    color: gray;
+    display: block;
+    margin-top: 4px;
+
+}

@@ -1,0 +1,30 @@
+/* RESPONSIVO */
+
+@media (mim-width: 600px) {
+
+    .container {
+        padding: 18px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .input-tesk {
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .button-task {
+        width: 85px;
+        font-size: 14px;
+    }
+
+    .task {
+        padding: 12px;
+    }
+
+    img {
+        opacity: 1;
+    }
+}
